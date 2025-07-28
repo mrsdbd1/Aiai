@@ -2,132 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LP NODES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Uptime Status</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0d0d0d;
-      color: white;
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      color: #333;
+      margin: 20px;
     }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #111;
-      border-bottom: 1px solid #333;
-    }
-
-    header h1 {
-      color: #3b82f6; /* Light Blue */
-      font-size: 1.5rem;
-      margin: 0;
-    }
-
-    .container {
-      padding: 2rem;
+    h1 {
       text-align: center;
     }
-
-    .status-box {
-      background-color: #1a1a1a;
-      padding: 1.5rem;
-      border-radius: 12px;
-      margin: 1.5rem auto;
-      width: 90%;
-      max-width: 500px;
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
     }
-
-    .status-box h2 {
-      color: #3b82f6;
+    th, td {
+      padding: 12px 20px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
     }
-
-    .service {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 1rem;
-      font-size: 1rem;
-      color: #ccc;
+    tr:hover {
+      background-color: #f1f1f1;
     }
-
-    .status {
-      color: #3b82f6;
+    .status-up {
+      color: green;
       font-weight: bold;
     }
-
-    .button {
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #3b82f6;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .button:hover {
-      background-color: #2563eb;
-    }
-
-    a.link {
-      color: #3b82f6;
-      text-decoration: none;
-    }
-
-    a.link:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
+    .status-down {
+      color: red;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>LP NODES</h1>
-  </header>
-
-  <div class="container">
-    <h2 style="color:#3b82f6;">✅ All services are online</h2>
-
-    <!-- Websites Section -->
-    <div class="status-box">
-      <h2>Websites</h2>
-      <div class="service">
-        <span>🌐 <a href="https://lpnodes.qzz.io" class="link" target="_blank">lpnodes.qzz.io</a></span>
-        <span class="status">Operational</span>
-      </div>
-      <div class="service">
-        <span>🧩 <a href="https://panel.lpnodes.qzz.io" class="link" target="_blank">panel.lpnodes.qzz.io</a></span>
-        <span class="status">Operational</span>
-      </div>
-    </div>
-
-    <!-- VPS Section -->
-    <div class="status-box">
-      <h2>VPS</h2>
-      <div class="service">
-        <span>🔥 Promox</span>
-        <span class="status">Up</span>
-      </div>
-      <div class="service">
-        <span>🌟 Discord Bot</span>
-        <span class="status">Up</span>
-      </div>
-    </div>
-
-    <a href="https://discord.gg/freevps" class="button" target="_blank">Get in Touch</a>
-
-    <footer>Last updated: <script>document.write(new Date().toLocaleDateString());</script></footer>
-  </div>
+  <h1>Server Uptime Status</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Server</th>
+        <th>Status</th>
+        <th>Last Checked</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>voidhost.pro</td>
+        <td class="status-up">Online</td>
+        <td>2025-07-28 23:50</td>
+      </tr>
+      <tr>
+        <td>api.voidhost.pro</td>
+        <td class="status-up">Online</td>
+        <td>2025-07-28 23:50</td>
+      </tr>
+      <tr>
+        <td>db.voidhost.pro</td>
+        <td class="status-down">Offline</td>
+        <td>2025-07-28 23:45</td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 </html>
