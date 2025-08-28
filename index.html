@@ -1,73 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LP NODES </title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f7f9fc;
-      color: #333;
-      margin: 20px;
-    }
-    h1 {
-      text-align: center;
-    }
-    table {
-      width: 80%;
-      margin: 20px auto;
-      border-collapse: collapse;
-    }
-    th, td {
-      padding: 12px 20px;
-      border-bottom: 1px solid #ddd;
-      text-align: left;
-    }
-    tr:hover {
-      background-color: #f1f1f1;
-    }
-    .status-up {
-      color: green;
-      font-weight: bold;
-    }
-    .status-down {
-      color: red;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LP NODES Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d1b2a; /* Dark blue background */
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1b263b; /* Slightly lighter dark blue */
+            color: #ffffff;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .status-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: #1b263b;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+        }
+        .service {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #34495e;
+        }
+        .service:last-child {
+            border-bottom: none;
+        }
+        .up {
+            color: #00ff7f; /* Bright green for online */
+            font-weight: bold;
+        }
+        a {
+            text-decoration: none;
+            color: #4da6ff; /* Light blue links */
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  <h1>LP NODES STATUS</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Server</th>
-        <th>Status</th>
-        <th>Last Checked</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>lpnodes.qzz.io</td>
-        <td class="status-up">Online</td>
-        <td>2025-07-28 23:50</td>
-      </tr>
-      <tr>
-        <td>panel.lpnodes.qzz.io</td>
-        <td class="status-up">Online</td>
-        <td>2025-07-28 23:50</td>
-      </tr>
-      <tr>
-        <td>vm.lpnodes.qzz.io</td>
-        <td class="status-down">Offline</td>
-        <td>2025-07-28 23:45</td>
-      </tr>
-      <tr>
-        <td>discord vps bot</td>
-        <td class="status-up">Online</td>
-        <td>2025-07-28 23:50</td>
-      </tr>
-  </table>
+    <header>
+        <h1>LPNodes Status Page</h1>
+    </header>
+
+    <div class="status-container">
+        <div class="service">
+            <a href="https://lpnodes.com/" target="_blank">Main Site</a>
+            <span class="up">Online</span>
+        </div>
+        <div class="service">
+            <a href="https://panel.lpnodes.com/" target="_blank">Main Panel</a>
+            <span class="up">Online</span>
+        </div>
+        <div class="service">
+            <a href="https://vm.lpnodes.com/" target="_blank">VM Panel</a>
+            <span class="up">Online</span>
+        </div>
+        <div class="service">
+            <a href="https://billing.lpnodes.com/" target="_blank">Billing</a>
+            <span class="up">Online</span>
+        </div>
+    </div>
 </body>
 </html>
